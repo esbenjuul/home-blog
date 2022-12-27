@@ -9,22 +9,6 @@ export function Footer({ siteName }: { siteName: string }) {
         <span>
           <a class="italic" href="/">{siteName}</a>
         </span>
-        <span>
-          Proudly powered by{" "}
-          <a href="https://fresh.deno.dev" class="font-bold" target="_blank">
-            Fresh
-          </a>{" "}
-          and{" "}
-          <a href="https://wordpress.org" class="font-bold" target="_blank">
-            WordPress
-          </a>
-        </span>
-        <span class="flex items-center gap-2">
-          <GitHub />
-          <a href="https://github.com/denoland/fresh-wordpress-templates">
-            Source
-          </a>
-        </span>
       </div>
     </footer>
   );

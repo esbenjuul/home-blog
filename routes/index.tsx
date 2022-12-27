@@ -41,7 +41,6 @@ export default function Index({ data }: PageProps<PageData>) {
   return (
     <div>
       <Header siteName={siteName} pages={pages} style="dark">
-        <img class="my-10" src="cover.png" alt="Deno chasing a butterfly" />
       </Header>
       <main class="p-4 mx-auto max-w-screen-lg">
         {posts.map((post) => <Post post={post} />)}
