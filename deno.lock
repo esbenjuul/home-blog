@@ -1,5 +1,14 @@
 {
   "version": "5",
+  "specifiers": {
+    "npm:preact@^10.27.2": "10.27.2"
+  },
+  "npm": {
+    "preact@10.27.2": {
+      "integrity": "sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg==",
+      "tarball": "https://nexus3.ur-update.dk/repository/npm-standard-release-group/preact/-/preact-10.27.2.tgz"
+    }
+  },
   "redirects": {
     "https://esm.sh/style-vendorizer@^2.0.0?target=denonext": "https://esm.sh/style-vendorizer@2.2.3?target=denonext"
   },
@@ -107,5 +116,12 @@
     "https://esm.sh/twind@0.16.17/denonext/twind.mjs": "197ba8db7ec1e541cd6be404b71f770abd7ebfdbcbf04bf02c2e4c1e3fd067a8",
     "https://esm.sh/twind@0.16.17/sheets": "03d294217bcde1fbb1fb9acb3e0a587d328b65c050b280c34dc86615ef1f6a43",
     "https://raw.githubusercontent.com/johnbillion/wp-json-schemas/2117b51650c9a662803e74182edf06af9bd327f7/packages/wp-types/index.ts": "31fc8fef7b368baecd395d2c7e482a29aec506728b8e6be95103f2948ba8485f"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@fresh/core@^2.1.4",
+      "npm:@preact/signals@^2.3.2",
+      "npm:preact@^10.27.2"
+    ]
   }
 }

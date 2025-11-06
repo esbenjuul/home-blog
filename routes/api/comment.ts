@@ -6,7 +6,9 @@ import { postComment } from "utils/wp.ts";
 type Comment = { post: number; name: string; email: string; content: string };
 
 export const handler: Handlers = {
-  async POST(req) {
+  async POST(ctx) {
+    const req = ctx.req;
+
     return Response.json(await postComment(await req.json() as Comment));
   },
 };

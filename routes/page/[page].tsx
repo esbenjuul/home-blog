@@ -22,7 +22,7 @@ type PageData = {
 };
 
 export const handler: Handlers<PageData> = {
-  async GET(_req, ctx) {
+  async GET(ctx) {
     const currentPage = +ctx.params.page;
     const [pages, siteName, [posts, metadata]] = await Promise.all([
       getPages(),

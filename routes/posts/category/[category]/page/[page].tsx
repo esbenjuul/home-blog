@@ -14,6 +14,7 @@ import { Header } from "components/Header.tsx";
 import { Footer } from "components/Footer.tsx";
 import { Pagination } from "components/Pagination.tsx";
 import { Post } from "components/Post.tsx";
+import { HttpError } from "fresh";
 
 type PageData = {
   pages: WpPost[];
@@ -25,7 +26,7 @@ type PageData = {
 };
 
 export const handler: Handlers<PageData> = {
-  async GET(_req, ctx) {
+  async GET(ctx) {
     const categoryName = ctx.params.category;
     const currentPage = +ctx.params.page;
     const [pages, siteName, category] = await Promise.all([
@@ -35,7 +36,7 @@ export const handler: Handlers<PageData> = {
     ]);
 
     if (!category) {
-      return ctx.renderNotFound();
+      throw new HttpError(404);
     }
     const [posts, metadata] = await getPostsByCategoryId(
       currentPage,

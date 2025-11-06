@@ -7,8 +7,10 @@
     "docker:reset": "deno task docker:clear || true && deno task docker"
   },
   "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "imports": {
+    "fresh": "jsr:@fresh/core@^2.1.4",
+    "preact": "npm:preact@^10.27.2",
+    "@preact/signals": "npm:@preact/signals@^2.3.2"
   }
 }
