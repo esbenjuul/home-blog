@@ -15,4 +15,6 @@ import globalStylePlugin from "utils/global_style_plugin.ts";
 
 await start(manifest, {
   plugins: [twindPlugin(twindConfig), globalStylePlugin],
+  port: Number(Deno.env.get("PORT")) || 8000,
+  hostname: Deno.env.get("HOSTNAME") || "0.0.0.0",
 });
